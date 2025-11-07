@@ -5,7 +5,7 @@ on:
 
 defaults:
   run: 
-    working-directory: envioerment/dev
+    working-directory: Enviornment/prod
 permissions:
   id-token: write
   contents: read
