@@ -1,0 +1,28 @@
+name: generic-infra
+
+on:
+  workflow_dispatch
+
+defaults:
+  run: 
+    working-directory: envioerment/dev
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  planning-job:
+    runs-on: self-hosted
+    name: first job
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6-beta
+    - name: Azure Login
+      uses: Azure/login@v2.3.0
+      with:
+        client-id: '361cf136-5f85-4de3-a990-0e4ff56323a6'
+        tenant-id: 'e36e2232-cac4-497a-9243-862b9b46221b'
+        subscription-id: '06f4c176-e41e-424a-bfc2-cb4b3a4e5fe5'
+ 
+    
+  
