@@ -24,10 +24,9 @@ jobs:
         tenant-id: 'e36e2232-cac4-497a-9243-862b9b46221b'
         subscription-id: '06f4c176-e41e-424a-bfc2-cb4b3a4e5fe5'
         
-    - name: Terraform fmt
-      id: fmt
+    - name: Check Terraform format
       run: terraform fmt -check
-      continue-on-error: true
+
       
     - name: Terraform Init
       id: init
